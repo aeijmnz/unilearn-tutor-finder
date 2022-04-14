@@ -1,0 +1,132 @@
+nav{
+    display: flex;
+    height: 85px;
+    width: 100%;
+    background: #ffffff;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+  }
+  nav .logo{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+  }
+  nav .logo-image{
+    width: 297x;
+    height: 99px;
+    /* overflow: hidden; */
+    vertical-align: middle;
+    /* margin-top: 12px; */
+}
+  nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  nav ul li{
+    margin: 0 5px;
+  }
+  nav ul li a, .signin-btn{
+    color: #2d4b44;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    color: #3d6958;
+    /* background: #f5f8fa; */
+  }
+  nav ul li .signin-btn,
+  nav ul li .signin-btn.active{
+    cursor: pointer;
+    color: #3d6958;
+    border: #2d4b44;
+    border-style: solid;
+    border-width: 2px;
+    /* background: #f5f8fa; */
+  }
+  nav ul li .signin-btn:hover{
+    color: #3d6958;
+    background: #f2f2f2;
+  }
+  nav .menu-btn{
+    color: #434648;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+  }
+  .nav-check[type="checkbox"]{
+    display: none;
+  }
+
+
+  @media (max-width: 1000px){
+    nav{
+      padding: 0 40px 0 50px;
+    }
+  }
+  @media (max-width: 920px) {
+    nav .menu-btn{
+      display: block;
+    }
+    /* #click:checked ~ .menu-btn:before{
+      content: "\f00d";
+    } */
+    nav ul{
+      position: fixed;
+      top: 70px;
+      left: -100%;
+      background: #ffffff;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+    }
+    #click:checked ~ ul{
+      left: 0;
+    }
+    nav ul li{
+      width: 90%;
+      margin: 40px 0;
+    }
+    nav ul li a, .signin-btn{
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 20px;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    #click:checked ~ ul li a{
+      margin-left: 0px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover{
+      background: none;
+      color: #2d4b44;
+    }
+  }
+  .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: -1;
+    width: 100%;
+    padding: 0 30px;
+    color: #1b1b1b;
+  }
+  .content div{
+    font-size: 40px;
+    font-weight: 700;
+  }
